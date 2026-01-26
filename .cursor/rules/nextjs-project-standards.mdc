@@ -1,0 +1,15 @@
+This project uses Next.js App Router.
+
+Global rules:
+- Always prefer SSG or SSR. Never use SPA-only rendering unless explicitly requested.
+- Use Server Components by default. Add "use client" only when strictly necessary.
+- Always implement proper SEO:
+  - Use Next.js Metadata API for title, description, OpenGraph, and Twitter tags.
+- Prioritize performance and Core Web Vitals:
+  - Minimize JavaScript sent to the client.
+  - Avoid unnecessary hydration.
+- Use shadcn/ui components only from /components/ui.
+- Do not reimplement UI components manually.
+- Assume the site must be fast, Google-indexable, and production-ready.
+- Use font 'Unbounded',Arial,sans-serif
+- Use shadcn MCP

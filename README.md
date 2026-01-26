@@ -1,0 +1,7 @@
+- Next.js App Router
+- SEO-first, performance-first
+- SSG/SSR by default
+- Server Components by default
+- Minimal client-side JavaScript
+- shadcn/ui only (no custom UI reimplementation)
+- Google Core Web Vitals are a priority

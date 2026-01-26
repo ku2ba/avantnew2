@@ -1,0 +1,18 @@
+User-Agent: *
+Disallow: /page19945215.html
+Disallow: /page19945997.html
+Disallow: /page20056862.html
+Disallow: /page79854636.html
+Disallow: /spasibo
+Disallow: /tilda/form*
+Disallow: /tilda/rec*
+Disallow: /tilda/click*
+Disallow: /tilda/scroll*
+Disallow: /tilda/popup*
+Disallow: /tilda/cart*
+Disallow: /tilda/product*
+Disallow: /tilda/event*
+Disallow:
+
+
+Sitemap: https://avantekb.ru/sitemap.xml

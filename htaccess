@@ -1,0 +1,92 @@
+ErrorDocument 403 /project4171530/page20056862.html
+ErrorDocument 404 /project4171530/page20056862.html
+
+DirectoryIndex page19905751.html
+
+RewriteEngine On
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule ^(.*)$ https://avantekb\.ru/$1 [R=301,L]
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =https
+RewriteCond %{HTTP_HOST} ^www\.avantekb.ru [NC]
+RewriteRule ^(.*)$ https://avantekb\.ru/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} /robots.txt
+RewriteCond "%{DOCUMENT_ROOT}/project4171530/robots_%{HTTP_HOST}.txt" -f
+RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
+RewriteRule ^ekspetiza-vs-priemka$ page80850336.html [NC]
+RewriteRule ^ekspetiza-vs-priemka/$ page80850336.html [NC]
+
+RewriteRule ^about$ page19940675.html [NC]
+RewriteRule ^about/$ page19940675.html [NC]
+
+RewriteRule ^sdacha-doma$ page80869366.html [NC]
+RewriteRule ^sdacha-doma/$ page80869366.html [NC]
+
+RewriteRule ^review$ page19941381.html [NC]
+RewriteRule ^review/$ page19941381.html [NC]
+
+RewriteRule ^contacts$ page19941653.html [NC]
+RewriteRule ^contacts/$ page19941653.html [NC]
+
+RewriteRule ^partner$ page61298577.html [NC]
+RewriteRule ^partner/$ page61298577.html [NC]
+
+RewriteRule ^yurist-po-nedvizhimosti$ page72603037.html [NC]
+RewriteRule ^yurist-po-nedvizhimosti/$ page72603037.html [NC]
+
+RewriteRule ^priemka-kvartir-ekaterinburg$ page72605419.html [NC]
+RewriteRule ^priemka-kvartir-ekaterinburg/$ page72605419.html [NC]
+
+RewriteRule ^defekty-v-kvartire-chto-delat$ page72628995.html [NC]
+RewriteRule ^defekty-v-kvartire-chto-delat/$ page72628995.html [NC]
+
+RewriteRule ^vzyskat-s-zastroishchika$ page72629449.html [NC]
+RewriteRule ^vzyskat-s-zastroishchika/$ page72629449.html [NC]
+
+RewriteRule ^neustojka$ page73502557.html [NC]
+RewriteRule ^neustojka/$ page73502557.html [NC]
+
+RewriteRule ^spasibo$ page79854636.html [NC]
+RewriteRule ^spasibo/$ page79854636.html [NC]
+
+RewriteRule ^blog$ page80855416.html [NC]
+RewriteRule ^blog/$ page80855416.html [NC]
+
+RewriteRule ^syd-bez-yurista$ page80875296.html [NC]
+RewriteRule ^syd-bez-yurista/$ page80875296.html [NC]
+
+RewriteRule ^kak-vzyskat-s-zastroishika-2025$ page81253856.html [NC]
+RewriteRule ^kak-vzyskat-s-zastroishika-2025/$ page81253856.html [NC]
+
+RewriteRule ^nedostatky-posle-zaseleniya-v-kvartiru$ page81266376.html [NC]
+RewriteRule ^nedostatky-posle-zaseleniya-v-kvartiru/$ page81266376.html [NC]
+
+RewriteRule ^kak-kupit-kvartiry-v-novostroike$ page81537406.html [NC]
+RewriteRule ^kak-kupit-kvartiry-v-novostroike/$ page81537406.html [NC]
+
+RewriteRule ^gde-kupit-kvartiry-2025$ page81540776.html [NC]
+RewriteRule ^gde-kupit-kvartiry-2025/$ page81540776.html [NC]
+
+RewriteRule ^kak-pravilno-prinyat-kvartiry-v-novostroike$ page81541606.html [NC]
+RewriteRule ^kak-pravilno-prinyat-kvartiry-v-novostroike/$ page81541606.html [NC]
+
+RewriteRule ^zastroishik-obyazan-platiti-za-defekty$ page82522296.html [NC]
+RewriteRule ^zastroishik-obyazan-platiti-za-defekty/$ page82522296.html [NC]
+
+RewriteRule ^keis-kak-polychit-777-ot-zastroishika$ page82530476.html [NC]
+RewriteRule ^keis-kak-polychit-777-ot-zastroishika/$ page82530476.html [NC]
+
+RewriteRule ^sud-podtverdil-pravo-pokupateley-trebovat-kompensaciyu-posle-priemki-kvartiry$ page86787226.html [NC]
+RewriteRule ^sud-podtverdil-pravo-pokupateley-trebovat-kompensaciyu-posle-priemki-kvartiry/$ page86787226.html [NC]
+
+RewriteRule ^kak-sud-sokratil-summu-vzyskaniya-s-zastroyschika-v-dva-raza$ page86804416.html [NC]
+RewriteRule ^kak-sud-sokratil-summu-vzyskaniya-s-zastroyschika-v-dva-raza/$ page86804416.html [NC]
+
+RewriteRule ^sud-ogranichil-vzyskanie-s-zastroyschika-po-novym-pravilam$ page88149576.html [NC]
+RewriteRule ^sud-ogranichil-vzyskanie-s-zastroyschika-po-novym-pravilam/$ page88149576.html [NC]
+
+RewriteRule ^yurist-nedvizhimost$ https://avantekb\.ru/yurist-po-nedvizhimosti [R=301,NC,L]
+
+
