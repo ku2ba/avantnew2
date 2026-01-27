@@ -11,7 +11,7 @@ export default function PageHero({ title, description }: PageHeroProps) {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         <div className="relative mb-8 sm:mb-10 lg:mb-12">
           <Image
-            src="/avant_logo_text.png"
+            src="/avant_logo_text_white.png"
             alt="Юридическая компания АВАНТ"
             width={360}
             height={80}
