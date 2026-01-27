@@ -61,7 +61,7 @@ const slides = [
         Профессиональная помощь профессионального юриста по недвижимости и спорам с застройщиками.
         Подробнее тут -{" "}
         <strong>
-          <a href="/yurist-nedvizhimost" className="underline">
+          <a href="/yurist-po-nedvizhimosti" className="underline">
             клик
           </a>
         </strong>

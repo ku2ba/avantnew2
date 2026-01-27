@@ -47,28 +47,30 @@ export default function MainNavigation() {
     <nav className="flex items-center justify-center w-full px-3 sm:px-6 py-3 sm:py-4 border-b bg-white relative z-40">
       {/* Логотип показываем только на десктопе, чтобы не мешал меню на мобилке */}
       <div className="absolute left-3 sm:left-6 hidden md:block">
-        <Image
-          src="/avant_logo_text.png"
-          alt="Avant Logo"
-          width={150}
-          height={40}
-          className="h-auto w-24 sm:w-[150px]"
-        />
+        <Link href="/" className="cursor-pointer">
+          <Image
+            src="/avant_logo_text.png"
+            alt="Avant Logo"
+            width={150}
+            height={40}
+            className="h-auto w-24 sm:w-[150px]"
+          />
+        </Link>
       </div>
 
       <NavigationMenu className="mx-auto max-w-full md:pl-[170px]">
         {/*
-          На мобильных: элементы меню переносятся и равномерно занимают ширину.
+          На мобильных: элементы меню в сетке 2 колонки, равномерно распределены.
           На десктопе: остаются в одну строку, выровненные по центру.
         */}
-        <NavigationMenuList className="flex flex-wrap justify-center gap-x-4 gap-y-1">
-          <NavigationMenuItem>
+        <NavigationMenuList className="grid grid-cols-2 sm:grid-cols-3 md:flex md:flex-row md:justify-center gap-x-2 gap-y-2 sm:gap-x-4 md:gap-x-2 w-full md:w-auto">
+          <NavigationMenuItem className="flex justify-center">
             <NavigationMenuLink asChild>
               <Link 
                 href="/" 
                 className={cn(
                   navigationMenuTriggerStyle(),
-                  "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap"
+                  "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap w-full text-center"
                 )}
               >
                 Главная
@@ -76,49 +78,61 @@ export default function MainNavigation() {
             </NavigationMenuLink>
           </NavigationMenuItem>
 
-          <NavigationMenuItem>
+          <NavigationMenuItem className="flex justify-center">
             <NavigationMenuTrigger 
-              className="bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap"
+              className="bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap w-full text-center"
             >
               Физ лицам
             </NavigationMenuTrigger>
             <NavigationMenuContent className="bg-white border shadow-lg">
               <ul className="grid w-[280px] gap-3 p-4 sm:w-[400px] md:w-[500px] md:grid-cols-1 lg:w-[600px]">
                 <ListItem
-                  href="/fiz-lica/priemka-kvartir"
+                  href="/priemka-kvartir-ekaterinburg"
                   title="Приемка квартир"
                 />
                 <ListItem
-                  href="/fiz-lica/vzyskanie-s-zastrojshchika"
+                  href="/vzyskat-s-zastroishchika"
                   title="Взыскание с застройщика"
                 />
                 <ListItem
-                  href="/fiz-lica/pomoshch-v-sfere-kriptovalyut"
+                  href="/defekty-v-kvartire-chto-delat"
+                  title="Найдем дефекты в квартире"
+                />
+                <ListItem
+                  href="/neustojka"
+                  title="Калькулятор неустойки"
+                />
+                <ListItem
+                  href="/yurist-po-nedvizhimosti"
+                  title="Юрист по недвижимости"
+                />
+                <ListItem
+                  href="/example"
                   title="Помощь в сфере криптовалют"
                 />
                 <ListItem
-                  href="/fiz-lica/bankrotstvo"
+                  href="/example"
                   title="Банкротство"
                 />
                 <ListItem
-                  href="/fiz-lica/trudovye-raznoglasiya"
+                  href="/example"
                   title="Трудовые разногласия"
                 />
                 <ListItem
-                  href="/fiz-lica/stroitelno-tehnicheskaya-ekspertiza"
+                  href="/example"
                   title="Строительно-техническая экспертиза жилых и коммерческих помещений"
                 />
                 <ListItem
-                  href="/fiz-lica/vzyskanie-zadolzhennostej"
+                  href="/example"
                   title="Взыскание задолженностей"
                 />
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
 
-          <NavigationMenuItem>
+          <NavigationMenuItem className="flex justify-center">
             <NavigationMenuTrigger 
-              className="bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap"
+              className="bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap w-full text-center"
             >
               Юр лицам
             </NavigationMenuTrigger>
@@ -131,13 +145,13 @@ export default function MainNavigation() {
             </NavigationMenuContent>
           </NavigationMenuItem>
 
-          <NavigationMenuItem>
+          <NavigationMenuItem className="flex justify-center">
             <NavigationMenuLink asChild>
               <Link 
                 href="/o-kompanii" 
                 className={cn(
                   navigationMenuTriggerStyle(),
-                  "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap"
+                  "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap w-full text-center"
                 )}
               >
                 О компании
@@ -145,13 +159,13 @@ export default function MainNavigation() {
             </NavigationMenuLink>
           </NavigationMenuItem>
 
-          <NavigationMenuItem>
+          <NavigationMenuItem className="flex justify-center">
             <NavigationMenuLink asChild>
               <Link 
-                href="/kontakty" 
+                href="/contacts" 
                 className={cn(
                   navigationMenuTriggerStyle(),
-                  "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap"
+                  "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap w-full text-center"
                 )}
               >
                 Контакты
@@ -159,13 +173,13 @@ export default function MainNavigation() {
             </NavigationMenuLink>
           </NavigationMenuItem>
 
-          <NavigationMenuItem>
+          <NavigationMenuItem className="flex justify-center">
             <NavigationMenuLink asChild>
               <Link 
                 href="/blog" 
                 className={cn(
                   navigationMenuTriggerStyle(),
-                  "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap"
+                  "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap w-full text-center"
                 )}
               >
                 Блог

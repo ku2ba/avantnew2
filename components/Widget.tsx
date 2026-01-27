@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { Card } from "@/components/ui/card"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -20,15 +19,15 @@ export default function Widget() {
       <div className="fixed bottom-6 right-6 z-50">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Card className="cursor-pointer hover:shadow-lg transition-shadow p-3 sm:p-4 bg-white border-2 border-gray-200 shadow-md">
+            <button className="cursor-pointer hover:shadow-lg transition-shadow p-3 sm:p-4 bg-[#c3a255] rounded-full shadow-md flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16">
               <Image
                 src="/vidget_icon.svg"
                 alt="Консультация"
                 width={40}
                 height={40}
-                className="w-10 h-10 sm:w-12 sm:h-12"
+                className="w-8 h-8 sm:w-10 sm:h-10"
               />
-            </Card>
+            </button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="w-56 mr-4">
             <DropdownMenuItem onClick={() => setIsFormOpen(true)}>

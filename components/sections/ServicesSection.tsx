@@ -6,22 +6,42 @@ const services = [
   {
     title: "Приемка квартир",
     description: "Профессиональная приемка квартир с выявлением всех дефектов",
+    href: "/priemka-kvartir-ekaterinburg",
   },
   {
     title: "Взыскание с застройщика",
     description: "Помощь в получении компенсации от застройщика",
+    href: "/vzyskat-s-zastroishchika",
+  },
+  {
+    title: "Найдем дефекты в квартире",
+    description: "Что делать при обнаружении строительных недостатков",
+    href: "/defekty-v-kvartire-chto-delat",
+  },
+  {
+    title: "Калькулятор неустойки",
+    description: "Расчет неустойки с застройщика за просрочку сдачи",
+    href: "/neustojka",
+  },
+  {
+    title: "Юрист по недвижимости",
+    description: "Специализация на спорах с застройщиками",
+    href: "/yurist-po-nedvizhimosti",
   },
   {
     title: "Помощь в сфере криптовалют",
     description: "Юридическая поддержка в вопросах криптовалют",
+    href: "/example",
   },
   {
     title: "Защита прав потребителей",
     description: "Защита ваших прав как потребителя",
+    href: "/example",
   },
   {
     title: "Банкротство",
     description: "Помощь в процедуре банкротства физических лиц",
+    href: "/example",
   },
 ]
 
@@ -34,7 +54,7 @@ export default function ServicesSection() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 sm:gap-8">
           {services.map((service, index) => (
-            <Link key={index} href="/example">
+            <Link key={index} href={service.href || "/example"}>
               <Card className="flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 cursor-pointer">
                 <CardHeader>
                   <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-4 relative rounded-full overflow-hidden bg-gray-100 flex items-center justify-center">
