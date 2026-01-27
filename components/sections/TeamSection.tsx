@@ -1,3 +1,6 @@
+"use client"
+
+import { useState } from "react"
 import Image from "next/image"
 import {
   Card,
@@ -7,8 +10,18 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { ChevronDown, Phone, MessageCircle } from "lucide-react"
+import ContactForm from "@/components/ContactForm"
 
 export default function TeamSection() {
+  const [isFormOpen, setIsFormOpen] = useState(false)
+
   return (
     <section className="w-full py-12 px-6 bg-white">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8 max-w-6xl mx-auto">
@@ -76,10 +89,39 @@ export default function TeamSection() {
 
           Удаленная аудио или видео консультация с квалифицированным юристом по направлению
         </p>
-        <Button className="font-unbounded bg-black text-white hover:bg-gray-800">
-          Бесплатный созвон с юристом
-        </Button>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button className="font-unbounded bg-black text-white hover:bg-gray-800">
+              Бесплатный созвон с юристом
+              <ChevronDown className="ml-2 h-4 w-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" className="w-56">
+            <DropdownMenuItem onClick={() => setIsFormOpen(true)}>
+              <Phone className="mr-2 h-4 w-4" />
+              <span>Заказать обратный звонок</span>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <a href="tel:+79122285809" className="flex items-center w-full">
+                <Phone className="mr-2 h-4 w-4" />
+                <span>Позвонить нам</span>
+              </a>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <a
+                href="https://t.me/shs969"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center w-full"
+              >
+                <MessageCircle className="mr-2 h-4 w-4" />
+                <span>Написать в телеграм</span>
+              </a>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
+      <ContactForm open={isFormOpen} onOpenChange={setIsFormOpen} />
     </section>
   )
 }

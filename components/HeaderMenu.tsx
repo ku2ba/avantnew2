@@ -18,8 +18,11 @@ export default function HeaderMenu() {
     <>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button className="font-montserrat bg-black text-white hover:bg-gray-800 text-xs sm:text-sm px-2 sm:px-4 py-1.5 sm:py-2 hidden sm:inline-flex">
-            Получить бесплатную консультацию
+          <Button className="font-montserrat bg-black text-white hover:bg-gray-800 text-[10px] xs:text-xs sm:text-sm px-2 sm:px-4 py-1.5 sm:py-2 leading-tight text-center">
+            {/* Разрешаем перенос слов и немного уменьшаем шрифт на очень узких экранах */}
+            <span className="block">
+              Получить бесплатную консультацию
+            </span>
             <ChevronDown className="ml-2 h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>

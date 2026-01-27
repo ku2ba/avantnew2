@@ -45,7 +45,8 @@ ListItem.displayName = "ListItem"
 export default function MainNavigation() {
   return (
     <nav className="flex items-center justify-center w-full px-3 sm:px-6 py-3 sm:py-4 border-b bg-white relative z-40">
-      <div className="absolute left-3 sm:left-6">
+      {/* Логотип показываем только на десктопе, чтобы не мешал меню на мобилке */}
+      <div className="absolute left-3 sm:left-6 hidden md:block">
         <Image
           src="/avant_logo_text.png"
           alt="Avant Logo"
@@ -55,15 +56,19 @@ export default function MainNavigation() {
         />
       </div>
 
-      <NavigationMenu className="mx-auto">
-        <NavigationMenuList className="flex-col md:flex-row flex-wrap">
+      <NavigationMenu className="mx-auto max-w-full md:pl-[170px]">
+        {/*
+          На мобильных: элементы меню переносятся и равномерно занимают ширину.
+          На десктопе: остаются в одну строку, выровненные по центру.
+        */}
+        <NavigationMenuList className="flex flex-wrap justify-center gap-x-4 gap-y-1">
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
               <Link 
                 href="/" 
                 className={cn(
                   navigationMenuTriggerStyle(),
-                  "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-sm"
+                  "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap"
                 )}
               >
                 Главная
@@ -73,7 +78,7 @@ export default function MainNavigation() {
 
           <NavigationMenuItem>
             <NavigationMenuTrigger 
-              className="bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-sm"
+              className="bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap"
             >
               Физ лицам
             </NavigationMenuTrigger>
@@ -113,7 +118,7 @@ export default function MainNavigation() {
 
           <NavigationMenuItem>
             <NavigationMenuTrigger 
-              className="bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-sm"
+              className="bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap"
             >
               Юр лицам
             </NavigationMenuTrigger>
@@ -132,7 +137,7 @@ export default function MainNavigation() {
                 href="/o-kompanii" 
                 className={cn(
                   navigationMenuTriggerStyle(),
-                  "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-sm"
+                  "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap"
                 )}
               >
                 О компании
@@ -146,7 +151,7 @@ export default function MainNavigation() {
                 href="/kontakty" 
                 className={cn(
                   navigationMenuTriggerStyle(),
-                  "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-sm"
+                  "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap"
                 )}
               >
                 Контакты
@@ -160,7 +165,7 @@ export default function MainNavigation() {
                 href="/blog" 
                 className={cn(
                   navigationMenuTriggerStyle(),
-                  "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-sm"
+                  "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap"
                 )}
               >
                 Блог

@@ -40,7 +40,7 @@ export default function Header() {
           variant="ghost"
           size="icon"
           asChild
-          className="hover:opacity-80 h-8 w-8 sm:h-10 sm:w-10"
+          className="hover:opacity-80 h-8 w-8 sm:h-10 sm:w-10 hidden sm:inline-flex"
         >
           <a href="https://t.me/+79122285809" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
             <svg
@@ -80,7 +80,7 @@ export default function Header() {
           variant="ghost"
           size="icon"
           asChild
-          className="hover:opacity-80 h-8 w-8 sm:h-10 sm:w-10"
+          className="hover:opacity-80 h-8 w-8 sm:h-10 sm:w-10 hidden sm:inline-flex"
         >
           <a href="https://instagram.com/your-page" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <svg
@@ -100,7 +100,7 @@ export default function Header() {
           variant="ghost"
           size="icon"
           asChild
-          className="hover:opacity-80 h-8 w-8 sm:h-10 sm:w-10"
+          className="hover:opacity-80 h-8 w-8 sm:h-10 sm:w-10 hidden sm:inline-flex"
         >
           <a href="tel:+79122285809" aria-label="Телефон">
             <svg

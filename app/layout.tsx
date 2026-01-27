@@ -3,6 +3,8 @@ import { Unbounded } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/Header"
 import MainNavigation from "@/components/NavigationMenu"
+import Footer from "@/components/Footer"
+import Widget from "@/components/Widget"
 
 const unbounded = Unbounded({
   subsets: ["latin", "cyrillic"],
@@ -35,6 +37,8 @@ export default function RootLayout({
         <Header />
         <MainNavigation />
         <main>{children}</main>
+        <Footer />
+        <Widget />
       </body>
     </html>
   )
