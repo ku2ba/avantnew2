@@ -1,12 +1,8 @@
 import { Metadata } from "next"
 import HeroSection from "@/components/sections/HeroSection"
-import WhoWeHelpSection from "@/components/sections/WhoWeHelpSection"
-import ProblemsSection from "@/components/sections/ProblemsSection"
 import ServicesSection from "@/components/sections/ServicesSection"
-import CasesSection from "@/components/sections/CasesSection"
+import CasesSectionWrapper from "@/components/sections/CasesSectionWrapper"
 import TeamSection from "@/components/sections/TeamSection"
-import ServicesLegalSection from "@/components/sections/ServicesLegalSection"
-import CtaSection from "@/components/sections/CtaSection"
 
 export const metadata: Metadata = {
   title: "Защита прав потребителей в сфере недвижимости",
@@ -27,12 +23,8 @@ export default function HomePage() {
     <>
       <HeroSection />
       <ServicesSection />
-      <CasesSection />
+      <CasesSectionWrapper />
       <TeamSection />
-      <ServicesLegalSection />
-      <WhoWeHelpSection />
-      <ProblemsSection />
-      <CtaSection />
     </>
   )
 }

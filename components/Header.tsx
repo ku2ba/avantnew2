@@ -63,10 +63,10 @@ export default function Header() {
           asChild
           className="hover:opacity-80 h-8 w-8 sm:h-10 sm:w-10 hidden sm:inline-flex"
         >
-          <a href="https://instagram.com/your-page" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp">
+          <a href="https://max.ru/u/f9LHodD0cOJhHIKiKoKDGrKFzXEAlnFB7TOjSz7910GYbAUqUMYG9O5UyFA" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp">
             <Image
               src="/whatsapp_icon.svg"
-              alt="Instagram"
+              alt="Whatsapp"
               width={24}
               height={24}
               className="w-5 h-5 sm:w-6 sm:h-6"

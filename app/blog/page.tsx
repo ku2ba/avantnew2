@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import Link from "next/link"
 import PageHero from "@/components/PageHero"
 import PageContent from "@/components/PageContent"
+import { getAllCaseSummaries } from "@/lib/cases"
 
 export const metadata: Metadata = {
   title: "Блог команды юристов АВАНТ - Полезные статьи о недвижимости | Екатеринбург",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   },
 }
 
-const blogPosts = [
+const baseBlogPosts = [
   {
     title: "Что делать при дефектах в квартире",
     description:
@@ -105,7 +106,17 @@ const blogPosts = [
   },
 ]
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const caseSummaries = await getAllCaseSummaries()
+
+  const casePosts = caseSummaries.map((item) => ({
+    title: item.title,
+    description: item.description,
+    url: `/cases/${item.id}`,
+  }))
+
+  const blogPosts = [...baseBlogPosts, ...casePosts]
+
   return (
     <>
       <PageHero
@@ -121,7 +132,7 @@ export default function BlogPage() {
                     <article key={index} className="border-b border-gray-200 pb-8 last:border-b-0">
                       <h2 className="text-xl sm:text-2xl font-semibold mb-3 text-gray-900">
                         <Link
-                          href={`/blog/${post.slug}`}
+                          href={"url" in post && post.url ? post.url : `/blog/${post.slug}`}
                           className="text-gray-900 hover:text-gray-600 transition-colors"
                         >
                           {post.title}
@@ -129,7 +140,7 @@ export default function BlogPage() {
                       </h2>
                       <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4">{post.description}</p>
                       <Link
-                        href={`/blog/${post.slug}`}
+                        href={"url" in post && post.url ? post.url : `/blog/${post.slug}`}
                         className="inline-block text-base font-medium text-gray-900 hover:text-gray-600 transition-colors underline"
                       >
                         Подробнее →
