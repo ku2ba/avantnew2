@@ -128,25 +128,28 @@ export default async function BlogPage() {
               {/* Список статей блога */}
               <section className="mb-10 sm:mb-12">
                 <div className="space-y-8">
-                  {blogPosts.map((post, index) => (
-                    <article key={index} className="border-b border-gray-200 pb-8 last:border-b-0">
-                      <h2 className="text-xl sm:text-2xl font-semibold mb-3 text-gray-900">
+                  {blogPosts.map((post, index) => {
+                    const href = "url" in post && post.url ? post.url : "slug" in post ? `/blog/${post.slug}` : "#"
+                    return (
+                      <article key={index} className="border-b border-gray-200 pb-8 last:border-b-0">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-3 text-gray-900">
+                          <Link
+                            href={href}
+                            className="text-gray-900 hover:text-gray-600 transition-colors"
+                          >
+                            {post.title}
+                          </Link>
+                        </h2>
+                        <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4">{post.description}</p>
                         <Link
-                          href={"url" in post && post.url ? post.url : `/blog/${post.slug}`}
-                          className="text-gray-900 hover:text-gray-600 transition-colors"
+                          href={href}
+                          className="inline-block text-base font-medium text-gray-900 hover:text-gray-600 transition-colors underline"
                         >
-                          {post.title}
+                          Подробнее →
                         </Link>
-                      </h2>
-                      <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4">{post.description}</p>
-                      <Link
-                        href={"url" in post && post.url ? post.url : `/blog/${post.slug}`}
-                        className="inline-block text-base font-medium text-gray-900 hover:text-gray-600 transition-colors underline"
-                      >
-                        Подробнее →
-                      </Link>
-                    </article>
-                  ))}
+                      </article>
+                    )
+                  })}
                 </div>
               </section>
       </PageContent>
