@@ -7,7 +7,7 @@ import HeaderMenu from "@/components/HeaderMenu"
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between w-full px-3 sm:px-6 py-3 sm:py-4 border-b bg-gradient-to-r from-gray-200 to-gray-300">
+    <header className="sticky top-0 z-50 flex items-center justify-between w-full px-3 sm:px-6 py-3 sm:py-4 border-b bg-gradient-to-r from-gray-200 to-gray-300">
       <div className="flex items-center gap-2 sm:gap-4">
         {/* Avatar с логотипом */}
         <Link href="/" className="cursor-pointer">
@@ -56,16 +56,16 @@ export default function Header() {
           </a>
         </Button>
 
-        {/* Instagram */}
+        {/* Whatsapp */}
         <Button
           variant="ghost"
           size="icon"
           asChild
           className="hover:opacity-80 h-8 w-8 sm:h-10 sm:w-10 hidden sm:inline-flex"
         >
-          <a href="https://instagram.com/your-page" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <a href="https://instagram.com/your-page" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp">
             <Image
-              src="/instagram_icon.svg"
+              src="/whatsapp_icon.svg"
               alt="Instagram"
               width={24}
               height={24}

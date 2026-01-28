@@ -4,29 +4,19 @@ import Link from "next/link"
 
 const services = [
   {
-    title: "Приемка квартир",
+    title: "Приемка",
     description: "Профессиональная приемка квартир с выявлением всех дефектов",
     href: "/priemka-kvartir-ekaterinburg",
   },
   {
-    title: "Взыскание с застройщика",
-    description: "Помощь в получении компенсации от застройщика",
-    href: "/vzyskat-s-zastroishchika",
-  },
-  {
-    title: "Найдем дефекты в квартире",
-    description: "Что делать при обнаружении строительных недостатков",
-    href: "/defekty-v-kvartire-chto-delat",
-  },
-  {
-    title: "Калькулятор неустойки",
-    description: "Расчет неустойки с застройщика за просрочку сдачи",
-    href: "/neustojka",
-  },
-  {
-    title: "Юрист по недвижимости",
-    description: "Специализация на спорах с застройщиками",
+    title: "Споры с застройщиком",
+    description: "Помощь в спорах с застройщиком и защита ваших прав",
     href: "/yurist-po-nedvizhimosti",
+  },
+  {
+    title: "Строительно-техническая экспертиза",
+    description: "Профессиональная экспертиза строительных объектов",
+    href: "/example",
   },
   {
     title: "Помощь в сфере криптовалют",
@@ -34,13 +24,13 @@ const services = [
     href: "/example",
   },
   {
-    title: "Защита прав потребителей",
-    description: "Защита ваших прав как потребителя",
+    title: "Экспертиза после потопа/пожара",
+    description: "Оценка ущерба и помощь в восстановлении прав",
     href: "/example",
   },
   {
-    title: "Банкротство",
-    description: "Помощь в процедуре банкротства физических лиц",
+    title: "Взыскание задолженности",
+    description: "Помощь во взыскании задолженности",
     href: "/example",
   },
 ]
@@ -50,7 +40,7 @@ export default function ServicesSection() {
     <section className="py-24 sm:py-32 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-12 sm:mb-16 text-left">
-          Услуги физическим лицам
+          Наши услуги
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 sm:gap-8">
           {services.map((service, index) => (

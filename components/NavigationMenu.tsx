@@ -44,7 +44,7 @@ ListItem.displayName = "ListItem"
 
 export default function MainNavigation() {
   return (
-    <nav className="flex items-center justify-center w-full px-3 sm:px-6 py-3 sm:py-4 border-b bg-white relative z-40">
+    <nav className="sticky top-[73px] sm:top-[81px] flex items-center justify-center w-full px-3 sm:px-6 py-3 sm:py-4 border-b bg-white relative z-40">
       {/* Логотип показываем только на десктопе, чтобы не мешал меню на мобилке */}
       <div className="absolute left-3 sm:left-6 hidden md:block">
         <Link href="/" className="cursor-pointer">
@@ -79,32 +79,30 @@ export default function MainNavigation() {
           </NavigationMenuItem>
 
           <NavigationMenuItem className="flex justify-center">
+            <NavigationMenuLink asChild>
+              <Link 
+                href="/priemka-kvartir-ekaterinburg" 
+                className={cn(
+                  navigationMenuTriggerStyle(),
+                  "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap w-full text-center"
+                )}
+              >
+                Приемка
+              </Link>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem className="flex justify-center">
             <NavigationMenuTrigger 
               className="bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap w-full text-center"
             >
-              Физ лицам
+              Юр. Услуги
             </NavigationMenuTrigger>
             <NavigationMenuContent className="bg-white border shadow-lg">
               <ul className="grid w-[280px] gap-3 p-4 sm:w-[400px] md:w-[500px] md:grid-cols-1 lg:w-[600px]">
                 <ListItem
-                  href="/priemka-kvartir-ekaterinburg"
-                  title="Приемка квартир"
-                />
-                <ListItem
-                  href="/vzyskat-s-zastroishchika"
-                  title="Взыскание с застройщика"
-                />
-                <ListItem
-                  href="/defekty-v-kvartire-chto-delat"
-                  title="Найдем дефекты в квартире"
-                />
-                <ListItem
-                  href="/neustojka"
-                  title="Калькулятор неустойки"
-                />
-                <ListItem
                   href="/yurist-po-nedvizhimosti"
-                  title="Юрист по недвижимости"
+                  title="Споры с застройщиком"
                 />
                 <ListItem
                   href="/example"
@@ -112,37 +110,28 @@ export default function MainNavigation() {
                 />
                 <ListItem
                   href="/example"
-                  title="Банкротство"
+                  title="Экспертиза после потопа пожара"
                 />
                 <ListItem
                   href="/example"
-                  title="Трудовые разногласия"
-                />
-                <ListItem
-                  href="/example"
-                  title="Строительно-техническая экспертиза жилых и коммерческих помещений"
-                />
-                <ListItem
-                  href="/example"
-                  title="Взыскание задолженностей"
+                  title="Взыскание задолженности"
                 />
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
 
           <NavigationMenuItem className="flex justify-center">
-            <NavigationMenuTrigger 
-              className="bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap w-full text-center"
-            >
-              Юр лицам
-            </NavigationMenuTrigger>
-            <NavigationMenuContent className="bg-white border shadow-lg">
-              <ul className="grid w-[280px] gap-3 p-4 sm:w-[400px] md:w-[500px] md:grid-cols-1 lg:w-[600px]">
-                <ListItem href="/jur-lica/usluga-1" title="Услуга 1" />
-                <ListItem href="/jur-lica/usluga-2" title="Услуга 2" />
-                <ListItem href="/jur-lica/usluga-3" title="Услуга 3" />
-              </ul>
-            </NavigationMenuContent>
+            <NavigationMenuLink asChild>
+              <Link 
+                href="/example" 
+                className={cn(
+                  navigationMenuTriggerStyle(),
+                  "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap w-full text-center"
+                )}
+              >
+                Экспертиза
+              </Link>
+            </NavigationMenuLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem className="flex justify-center">

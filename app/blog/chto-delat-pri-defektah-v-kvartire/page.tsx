@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "Что делать при дефектах в квартире после приемки. Как зафиксировать строительные недостатки, составить претензию застройщику, взыскать компенсацию. Профессиональная помощь в Екатеринбурге.",
   keywords: "дефекты в квартире, строительные недостатки, что делать, компенсация застройщика, Екатеринбург",
   openGraph: {
-    url: "https://avantekb.ru/defekty-v-kvartire-chto-delat",
+    url: "https://avantekb.ru/blog/chto-delat-pri-defektah-v-kvartire",
     title: "Что делать при дефектах в квартире - АВАНТ",
     description:
       "Обнаружили строительные недостатки после получения квартиры? Мы поможем зафиксировать дефекты и взыскать компенсацию с застройщика.",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: "Помощь при строительных недостатках в квартире",
   },
   alternates: {
-    canonical: "https://avantekb.ru/defekty-v-kvartire-chto-delat",
+    canonical: "https://avantekb.ru/blog/chto-delat-pri-defektah-v-kvartire",
   },
 }
 
