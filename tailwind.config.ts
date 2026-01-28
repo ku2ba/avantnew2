@@ -57,7 +57,7 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        unbounded: ["var(--font-unbounded)", "Arial", "sans-serif"],
+        unbounded: ['"Unbounded"', "Arial", "sans-serif"],
       },
     },
   },

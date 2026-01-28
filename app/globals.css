@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -69,6 +71,6 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-unbounded), Arial, sans-serif;
+    font-family: "Unbounded", Arial, sans-serif;
   }
 }

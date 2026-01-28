@@ -1,16 +1,9 @@
 import type { Metadata } from "next"
-import { Unbounded } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/Header"
 import MainNavigation from "@/components/NavigationMenu"
 import Footer from "@/components/Footer"
 import Widget from "@/components/Widget"
-
-const unbounded = Unbounded({
-  subsets: ["latin", "cyrillic"],
-  variable: "--font-unbounded",
-  display: "swap",
-})
 
 export const metadata: Metadata = {
   title: "Защита прав потребителей в сфере недвижимости",
@@ -32,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ru" className={unbounded.variable}>
+    <html lang="ru">
       <body className="font-unbounded antialiased">
         <Header />
         <MainNavigation />
