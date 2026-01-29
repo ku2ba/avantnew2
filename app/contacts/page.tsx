@@ -61,14 +61,6 @@ export default function ContactsPage() {
                           +7 (912) 228-58-09
                         </a>
                       </li>
-                      <li>
-                        <a
-                          href="tel:+7912200102"
-                          className="text-gray-900 hover:text-gray-600 transition-colors underline"
-                        >
-                          +7 (922) 220-01-02
-                        </a>
-                      </li>
                     </ul>
                   </div>
 
