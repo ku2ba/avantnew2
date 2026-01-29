@@ -4,6 +4,7 @@ import Header from "@/components/Header"
 import MainNavigation from "@/components/NavigationMenu"
 import Footer from "@/components/Footer"
 import Widget from "@/components/Widget"
+import Analytics from "@/components/Analytics"
 
 export const metadata: Metadata = {
   title: "Защита прав потребителей в сфере недвижимости",
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className="font-unbounded antialiased">
+        <Analytics />
         <Header />
         <MainNavigation />
         <main>{children}</main>

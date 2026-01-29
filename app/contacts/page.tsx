@@ -49,6 +49,11 @@ export default function ContactsPage() {
                         <a
                           href="tel:+73432728180"
                           className="text-gray-900 hover:text-gray-600 transition-colors underline"
+                          data-analytics-event="phone_click"
+                          data-analytics-location="contacts"
+                          data-analytics-action="phone"
+                          data-analytics-label="Contacts Page Phone 1"
+                          data-analytics-phone="+73432728180"
                         >
                           +7 (343) 272-81-80
                         </a>
@@ -57,6 +62,11 @@ export default function ContactsPage() {
                         <a
                           href="tel:+79122285809"
                           className="text-gray-900 hover:text-gray-600 transition-colors underline"
+                          data-analytics-event="phone_click"
+                          data-analytics-location="contacts"
+                          data-analytics-action="phone"
+                          data-analytics-label="Contacts Page Phone 2"
+                          data-analytics-phone="+79122285809"
                         >
                           +7 (912) 228-58-09
                         </a>
@@ -130,6 +140,10 @@ export default function ContactsPage() {
                       rel="nofollow noopener noreferrer"
                       className="text-gray-900 hover:text-gray-600 transition-colors underline text-lg"
                       aria-label="ВКонтакте"
+                      data-analytics-event="lead_click"
+                      data-analytics-location="contacts"
+                      data-analytics-action="vk"
+                      data-analytics-label="Contacts Page VK"
                     >
                       ВКонтакте
                     </a>
@@ -141,17 +155,25 @@ export default function ContactsPage() {
                       rel="nofollow noopener noreferrer"
                       className="text-gray-900 hover:text-gray-600 transition-colors underline text-lg"
                       aria-label="Telegram"
+                      data-analytics-event="lead_click"
+                      data-analytics-location="contacts"
+                      data-analytics-action="telegram"
+                      data-analytics-label="Contacts Page Telegram"
                     >
                       Telegram
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://wa.me/79122285809"
+                      href="https://max.ru/u/f9LHodD0cOJhHIKiKoKDGrKFzXEAlnFB7TOjSz7910GYbAUqUMYG9O5UyFA"
                       target="_blank"
                       rel="nofollow noopener noreferrer"
                       className="text-gray-900 hover:text-gray-600 transition-colors underline text-lg"
                       aria-label="WhatsApp"
+                      data-analytics-event="lead_click"
+                      data-analytics-location="contacts"
+                      data-analytics-action="whatsapp"
+                      data-analytics-label="Contacts Page WhatsApp"
                     >
                       WhatsApp
                     </a>

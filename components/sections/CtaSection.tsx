@@ -36,12 +36,22 @@ export default function CtaSection() {
             size="lg"
             className="bg-[#c3a255] hover:bg-[#b8944a] text-white text-base sm:text-lg px-8 py-6"
             onClick={() => setIsFormOpen(true)}
+            data-analytics-event="lead_click"
+            data-analytics-location="slider"
+            data-analytics-action="leave_request"
+            data-analytics-label="CTA Section Leave Request"
+            data-analytics-form-id="contact_request"
           >
             ОСТАВИТЬ ЗАЯВКУ
           </Button>
         </div>
       </div>
-      <ContactForm open={isFormOpen} onOpenChange={setIsFormOpen} />
+      <ContactForm
+        open={isFormOpen}
+        onOpenChange={setIsFormOpen}
+        formLocation="slider"
+        formId="contact_request"
+      />
     </section>
   )
 }

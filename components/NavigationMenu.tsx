@@ -150,12 +150,16 @@ export default function MainNavigation() {
 
           <NavigationMenuItem className="flex justify-center">
             <NavigationMenuLink asChild>
-              <Link 
-                href="/contacts" 
+              <Link
+                href="/contacts"
                 className={cn(
                   navigationMenuTriggerStyle(),
                   "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap w-full text-center"
                 )}
+                data-analytics-event="lead_click"
+                data-analytics-location="NavigationMenu"
+                data-analytics-action="open_contacts_page"
+                data-analytics-label="Open Contacts Page"
               >
                 Контакты
               </Link>

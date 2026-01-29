@@ -20,7 +20,16 @@ const slides = [
         
         <p className="mt-4">
           Позвоните нам самостоятельно{" "}
-          <a href="tel:+73432728180" className="underline">
+          <a
+            href="tel:+73432728180"
+            className="underline"
+            data-analytics-event="phone_click"
+            data-analytics-location="slider"
+            data-analytics-action="phone"
+            data-analytics-label="Slider Phone"
+            data-analytics-phone="+73432728180"
+            data-analytics-slide="1"
+          >
             +7 (343) 272-81-80
           </a>
         </p>
@@ -176,6 +185,12 @@ export default function HeroSection() {
                 size="lg"
                 className="bg-[#c3a255] hover:bg-[#b8944a] text-white text-base sm:text-lg px-8 py-6"
                 onClick={() => setIsFormOpen(true)}
+                data-analytics-event="lead_click"
+                data-analytics-location="slider"
+                data-analytics-action="leave_request"
+                data-analytics-label="Slider Leave Request"
+                data-analytics-slide={String(currentSlideData.id)}
+                data-analytics-form-id="contact_request"
               >
                 {currentSlideData.buttonText}
               </Button>
@@ -213,7 +228,13 @@ export default function HeroSection() {
           />
         ))}
       </div>
-      <ContactForm open={isFormOpen} onOpenChange={setIsFormOpen} />
+      <ContactForm
+        open={isFormOpen}
+        onOpenChange={setIsFormOpen}
+        formLocation="slider"
+        formId="contact_request"
+        slideId={String(currentSlideData.id)}
+      />
     </section>
   )
 }

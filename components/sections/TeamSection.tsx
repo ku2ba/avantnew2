@@ -91,37 +91,86 @@ export default function TeamSection() {
         </p>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button className="font-unbounded bg-black text-white hover:bg-gray-800">
+            <Button
+              className="font-unbounded bg-black text-white hover:bg-gray-800"
+              data-analytics-menu-trigger
+              data-analytics-location="team"
+              data-analytics-label="Team Consultation Menu"
+            >
               Бесплатный созвон с юристом
               <ChevronDown className="ml-2 h-4 w-4" />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="w-56">
-            <DropdownMenuItem onClick={() => setIsFormOpen(true)}>
+          <DropdownMenuContent
+            align="end"
+            className="w-56"
+            data-analytics-menu-content
+            data-location="team"
+          >
+            <DropdownMenuItem
+              onClick={() => setIsFormOpen(true)}
+              data-analytics-event="lead_click"
+              data-analytics-location="team"
+              data-analytics-action="callback"
+              data-analytics-label="Team Callback"
+              data-analytics-form-id="contact_callback"
+            >
               <Phone className="mr-2 h-4 w-4" />
               <span>Заказать обратный звонок</span>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <a href="tel:+79122285809" className="flex items-center w-full">
+              <a
+                href="tel:+79122285809"
+                className="flex items-center w-full"
+                data-analytics-event="lead_click"
+                data-analytics-location="team"
+                data-analytics-action="call"
+                data-analytics-label="Team Call"
+                data-analytics-phone="+79122285809"
+              >
                 <Phone className="mr-2 h-4 w-4" />
                 <span>Позвонить нам</span>
               </a>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
               <a
-                href="https://t.me/shs969"
+                href="https://t.me/avantekb"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center w-full"
+                data-analytics-event="lead_click"
+                data-analytics-location="team"
+                data-analytics-action="telegram"
+                data-analytics-label="Team Telegram"
               >
                 <MessageCircle className="mr-2 h-4 w-4" />
                 <span>Написать в телеграм</span>
               </a>
             </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <a
+                href="https://max.ru/u/f9LHodD0cOJhHIKiKoKDGrKFzXEAlnFB7TOjSz7910GYbAUqUMYG9O5UyFA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center w-full"
+                data-analytics-event="lead_click"
+                data-analytics-location="team"
+                data-analytics-action="whatsapp"
+                data-analytics-label="Team WhatsApp"
+              >
+                <MessageCircle className="mr-2 h-4 w-4" />
+                <span>Написать в WhatsApp</span>
+              </a>
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-      <ContactForm open={isFormOpen} onOpenChange={setIsFormOpen} />
+      <ContactForm
+        open={isFormOpen}
+        onOpenChange={setIsFormOpen}
+        formLocation="team"
+        formId="contact_callback"
+      />
     </section>
   )
 }
