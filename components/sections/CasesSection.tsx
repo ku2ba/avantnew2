@@ -101,7 +101,15 @@ export default function CasesSection({ cases }: CasesSectionProps) {
                         asChild
                         className="w-full bg-[#c3a255] hover:bg-[#b8944a] text-white"
                       >
-                        <Link href={caseItem.link}>Подробнее</Link>
+                        <Link
+                          href={caseItem.link}
+                          data-analytics-event="navigation_click"
+                          data-analytics-location="cases"
+                          data-analytics-label={`Cases: ${caseItem.title}`}
+                          data-analytics-page-path={caseItem.link}
+                        >
+                          Подробнее
+                        </Link>
                       </Button>
                     </CardContent>
                   </Card>

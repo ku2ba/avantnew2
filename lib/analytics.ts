@@ -10,8 +10,19 @@ interface AttributionParams {
   yclid?: string
 }
 
+type AnalyticsLocation =
+  | "header"
+  | "slider"
+  | "team"
+  | "widget"
+  | "NavigationMenu"
+  | "contacts"
+  | "footer"
+  | "services"
+  | "cases"
+
 interface AnalyticsEventParams {
-  location: "header" | "slider" | "team" | "widget" | "NavigationMenu" | "contacts"
+  location: AnalyticsLocation
   action?: string
   label: string
   phone?: string
@@ -19,6 +30,7 @@ interface AnalyticsEventParams {
   form_id?: string
   error_type?: string
   error_code?: string
+  page_path?: string
   [key: string]: string | undefined
 }
 
@@ -282,4 +294,21 @@ export function trackPhoneClick(
   }
 
   trackEvent("phone_click", params)
+}
+
+/** Трекинг перехода по внутренней ссылке (меню, футер, блок услуг, кейсы) */
+export function trackNavigationClick(
+  location: AnalyticsLocation,
+  label: string,
+  page_path?: string,
+  slide_id?: string
+): void {
+  const params: AnalyticsEventParams = {
+    location,
+    action: "navigate",
+    label,
+    page_path: page_path || undefined,
+  }
+  if (slide_id) params.slide_id = slide_id
+  trackEvent("navigation_click", params)
 }

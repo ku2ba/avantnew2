@@ -7,7 +7,14 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-4">
           {/* Логотип и копирайт */}
           <div className="md:w-1/3">
-            <Link href="/" className="block mb-4">
+            <Link
+              href="/"
+              className="block mb-4"
+              data-analytics-event="navigation_click"
+              data-analytics-location="footer"
+              data-analytics-label="Footer: Main"
+              data-analytics-page-path="/"
+            >
               <img
                 src="/avant_logo_futer.svg"
                 alt="Авант"
@@ -25,6 +32,10 @@ export default function Footer() {
                 <Link
                   href="/"
                   className="text-white text-xs hover:text-[#c3a255] transition-colors"
+                  data-analytics-event="navigation_click"
+                  data-analytics-location="footer"
+                  data-analytics-label="Footer: Главная"
+                  data-analytics-page-path="/"
                 >
                   Главная
                 </Link>
@@ -33,6 +44,10 @@ export default function Footer() {
                 <Link
                   href="/about"
                   className="text-white text-xs hover:text-[#c3a255] transition-colors"
+                  data-analytics-event="navigation_click"
+                  data-analytics-location="footer"
+                  data-analytics-label="Footer: О компании"
+                  data-analytics-page-path="/about"
                 >
                   О компании
                 </Link>
@@ -41,6 +56,10 @@ export default function Footer() {
                 <Link
                   href="/review"
                   className="text-white text-xs hover:text-[#c3a255] transition-colors"
+                  data-analytics-event="navigation_click"
+                  data-analytics-location="footer"
+                  data-analytics-label="Footer: Отзывы"
+                  data-analytics-page-path="/review"
                 >
                   Отзывы
                 </Link>
@@ -49,6 +68,10 @@ export default function Footer() {
                 <Link
                   href="/contacts"
                   className="text-white text-xs hover:text-[#c3a255] transition-colors"
+                  data-analytics-event="navigation_click"
+                  data-analytics-location="footer"
+                  data-analytics-label="Footer: Контакты"
+                  data-analytics-page-path="/contacts"
                 >
                   Контакты
                 </Link>
@@ -57,6 +80,10 @@ export default function Footer() {
                 <Link
                   href="/partner"
                   className="text-white text-xs hover:text-[#c3a255] transition-colors"
+                  data-analytics-event="navigation_click"
+                  data-analytics-location="footer"
+                  data-analytics-label="Footer: Сотрудничество"
+                  data-analytics-page-path="/partner"
                 >
                   Сотрудничество
                 </Link>
@@ -74,6 +101,10 @@ export default function Footer() {
                   target="_blank"
                   rel="noreferrer noopener"
                   className="text-white text-xs hover:text-[#c3a255] transition-colors"
+                  data-analytics-event="lead_click"
+                  data-analytics-location="footer"
+                  data-analytics-action="vk"
+                  data-analytics-label="Footer: VK"
                 >
                   Vk
                 </Link>
@@ -84,16 +115,24 @@ export default function Footer() {
                   target="_blank"
                   rel="noreferrer noopener"
                   className="text-white text-xs hover:text-[#c3a255] transition-colors"
+                  data-analytics-event="lead_click"
+                  data-analytics-location="footer"
+                  data-analytics-action="telegram"
+                  data-analytics-label="Footer: Telegram"
                 >
                   Telegram
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="https://max.ru/u/f9LHodD0cOJhHIKiKoKDGrKFzXEAlnFB7TOjSz7910GYbAUqUMYG9O5UyFA"
                   target="_blank"
                   rel="noreferrer noopener"
                   className="text-white text-xs hover:text-[#c3a255] transition-colors"
+                  data-analytics-event="lead_click"
+                  data-analytics-location="footer"
+                  data-analytics-action="whatsapp"
+                  data-analytics-label="Footer: Max"
                 >
                   Max
                 </Link>

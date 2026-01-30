@@ -128,16 +128,16 @@ export default function ContactForm({
     setIsSubmitting(true)
 
     try {
-      // Формируем сообщение для Telegram
-      const message = `Новая заявка с сайта:\n\nИмя: ${name}\nВопрос: ${question}\nТелефон: ${phone}`
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, question, phone }),
+      })
 
-      // Отправка через Telegram Web App или прямой редирект
-      // Используем Telegram Web API для отправки сообщения в чат
-      const telegramChatId = "shs969" // ID чата или username
-      const telegramUrl = `https://t.me/${telegramChatId}?text=${encodeURIComponent(message)}`
-
-      // Открываем Telegram с предзаполненным сообщением
-      window.open(telegramUrl, "_blank")
+      const data = await res.json().catch(() => ({}))
+      if (!res.ok) {
+        throw new Error(data.error || "Ошибка отправки")
+      }
 
       // Отслеживаем успешную отправку
       const successLabel = slideId
@@ -153,7 +153,7 @@ export default function ContactForm({
       setIsSubmitting(false)
       setHasStarted(false)
       onOpenChange(false)
-      alert("Заявка отправлена! Откройте Telegram для подтверждения.")
+      alert("Заявка отправлена! Мы свяжемся с вами в ближайшее время.")
     } catch (error) {
       // Отслеживаем ошибку отправки
       const errorLabel = slideId

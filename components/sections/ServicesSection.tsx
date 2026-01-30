@@ -44,7 +44,14 @@ export default function ServicesSection() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 sm:gap-8">
           {services.map((service, index) => (
-            <Link key={index} href={service.href || "/example"}>
+            <Link
+              key={index}
+              href={service.href || "/example"}
+              data-analytics-event="navigation_click"
+              data-analytics-location="services"
+              data-analytics-label={`Services: ${service.title}`}
+              data-analytics-page-path={service.href || "/example"}
+            >
               <Card className="flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 cursor-pointer">
                 <CardHeader>
                   <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-4 relative rounded-full overflow-hidden bg-gray-100 flex items-center justify-center">

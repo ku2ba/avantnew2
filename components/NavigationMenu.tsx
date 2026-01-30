@@ -16,7 +16,13 @@ import { cn } from "@/lib/utils"
 
 const ListItem = React.forwardRef<
   React.ElementRef<typeof Link>,
-  React.ComponentPropsWithoutRef<typeof Link> & { title: string }
+  React.ComponentPropsWithoutRef<typeof Link> & {
+    title: string
+    "data-analytics-event"?: string
+    "data-analytics-location"?: string
+    "data-analytics-label"?: string
+    "data-analytics-page-path"?: string
+  }
 >(({ className, title, children, ...props }, ref) => {
   return (
     <li>
@@ -66,12 +72,16 @@ export default function MainNavigation() {
         <NavigationMenuList className="grid grid-cols-2 sm:grid-cols-3 md:flex md:flex-row md:justify-center gap-x-2 gap-y-2 sm:gap-x-4 md:gap-x-2 w-full md:w-auto">
           <NavigationMenuItem className="flex justify-center">
             <NavigationMenuLink asChild>
-              <Link 
-                href="/" 
+              <Link
+                href="/"
                 className={cn(
                   navigationMenuTriggerStyle(),
                   "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap w-full text-center"
                 )}
+                data-analytics-event="navigation_click"
+                data-analytics-location="NavigationMenu"
+                data-analytics-label="Navigation: Main"
+                data-analytics-page-path="/"
               >
                 Главная
               </Link>
@@ -80,12 +90,16 @@ export default function MainNavigation() {
 
           <NavigationMenuItem className="flex justify-center">
             <NavigationMenuLink asChild>
-              <Link 
-                href="/priemka-kvartir-ekaterinburg" 
+              <Link
+                href="/priemka-kvartir-ekaterinburg"
                 className={cn(
                   navigationMenuTriggerStyle(),
                   "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap w-full text-center"
                 )}
+                data-analytics-event="navigation_click"
+                data-analytics-location="NavigationMenu"
+                data-analytics-label="Navigation: Priemka"
+                data-analytics-page-path="/priemka-kvartir-ekaterinburg"
               >
                 Приемка
               </Link>
@@ -103,18 +117,34 @@ export default function MainNavigation() {
                 <ListItem
                   href="/yurist-po-nedvizhimosti"
                   title="Споры с застройщиком"
+                  data-analytics-event="navigation_click"
+                  data-analytics-location="NavigationMenu"
+                  data-analytics-label="Navigation: Споры с застройщиком"
+                  data-analytics-page-path="/yurist-po-nedvizhimosti"
                 />
                 <ListItem
                   href="/example"
                   title="Помощь в сфере криптовалют"
+                  data-analytics-event="navigation_click"
+                  data-analytics-location="NavigationMenu"
+                  data-analytics-label="Navigation: Криптовалюты"
+                  data-analytics-page-path="/example"
                 />
                 <ListItem
                   href="/example"
                   title="Экспертиза после потопа пожара"
+                  data-analytics-event="navigation_click"
+                  data-analytics-location="NavigationMenu"
+                  data-analytics-label="Navigation: Экспертиза потоп/пожар"
+                  data-analytics-page-path="/example"
                 />
                 <ListItem
                   href="/example"
                   title="Взыскание задолженности"
+                  data-analytics-event="navigation_click"
+                  data-analytics-location="NavigationMenu"
+                  data-analytics-label="Navigation: Взыскание задолженности"
+                  data-analytics-page-path="/example"
                 />
               </ul>
             </NavigationMenuContent>
@@ -122,12 +152,16 @@ export default function MainNavigation() {
 
           <NavigationMenuItem className="flex justify-center">
             <NavigationMenuLink asChild>
-              <Link 
-                href="/example" 
+              <Link
+                href="/example"
                 className={cn(
                   navigationMenuTriggerStyle(),
                   "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap w-full text-center"
                 )}
+                data-analytics-event="navigation_click"
+                data-analytics-location="NavigationMenu"
+                data-analytics-label="Navigation: Экспертиза"
+                data-analytics-page-path="/example"
               >
                 Экспертиза
               </Link>
@@ -136,12 +170,16 @@ export default function MainNavigation() {
 
           <NavigationMenuItem className="flex justify-center">
             <NavigationMenuLink asChild>
-              <Link 
-                href="/o-kompanii" 
+              <Link
+                href="/o-kompanii"
                 className={cn(
                   navigationMenuTriggerStyle(),
                   "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap w-full text-center"
                 )}
+                data-analytics-event="navigation_click"
+                data-analytics-location="NavigationMenu"
+                data-analytics-label="Navigation: О компании"
+                data-analytics-page-path="/o-kompanii"
               >
                 О компании
               </Link>
@@ -160,6 +198,7 @@ export default function MainNavigation() {
                 data-analytics-location="NavigationMenu"
                 data-analytics-action="open_contacts_page"
                 data-analytics-label="Open Contacts Page"
+                data-analytics-page-path="/contacts"
               >
                 Контакты
               </Link>
@@ -168,12 +207,16 @@ export default function MainNavigation() {
 
           <NavigationMenuItem className="flex justify-center">
             <NavigationMenuLink asChild>
-              <Link 
-                href="/blog" 
+              <Link
+                href="/blog"
                 className={cn(
                   navigationMenuTriggerStyle(),
                   "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent text-gray-600 hover:text-gray-900 font-montserrat text-xs sm:text-sm whitespace-nowrap w-full text-center"
                 )}
+                data-analytics-event="navigation_click"
+                data-analytics-location="NavigationMenu"
+                data-analytics-label="Navigation: Блог"
+                data-analytics-page-path="/blog"
               >
                 Блог
               </Link>

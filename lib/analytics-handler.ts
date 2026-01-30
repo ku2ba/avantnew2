@@ -6,6 +6,7 @@ import {
   trackLeadClick,
   trackFormOpen,
   trackPhoneClick,
+  trackNavigationClick,
 } from "./analytics"
 
 // Инициализация обработчика
@@ -38,10 +39,14 @@ function handleAnalyticsClick(e: MouseEvent): void {
     | "widget"
     | "NavigationMenu"
     | "contacts"
+    | "footer"
+    | "services"
+    | "cases"
   const action = analyticsElement.getAttribute("data-analytics-action")
   const label = analyticsElement.getAttribute("data-analytics-label") || ""
   const phone = analyticsElement.getAttribute("data-analytics-phone")
   const slideId = analyticsElement.getAttribute("data-analytics-slide")
+  const pagePath = analyticsElement.getAttribute("data-analytics-page-path")
 
   // Для внешних ссылок (tel:, https://, mailto:) используем задержку перед переходом
   const href = analyticsElement.getAttribute("href")
@@ -61,6 +66,13 @@ function handleAnalyticsClick(e: MouseEvent): void {
     }
   } else if (eventType === "phone_click" && phone) {
     trackPhoneClick(location || "header", phone, label, slideId || undefined)
+  } else if (eventType === "navigation_click") {
+    trackNavigationClick(
+      location || "NavigationMenu",
+      label,
+      pagePath || undefined,
+      slideId || undefined
+    )
   }
 
   // Для внешних ссылок даем время на отправку события перед переходом

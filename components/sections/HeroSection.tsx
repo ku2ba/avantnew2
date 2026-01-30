@@ -45,7 +45,15 @@ const slides = [
       <>
         Подробнее об услуге читайте тут -{" "}
         <strong>
-          <a href="/priemka-kvartir-ekaterinburg" className="underline">
+          <a
+            href="/priemka-kvartir-ekaterinburg"
+            className="underline"
+            data-analytics-event="navigation_click"
+            data-analytics-location="slider"
+            data-analytics-label="Slider: Priemka"
+            data-analytics-page-path="/priemka-kvartir-ekaterinburg"
+            data-analytics-slide="2"
+          >
             клик
           </a>
         </strong>
@@ -70,7 +78,15 @@ const slides = [
         Профессиональная помощь профессионального юриста по недвижимости и спорам с застройщиками.
         Подробнее тут -{" "}
         <strong>
-          <a href="/yurist-po-nedvizhimosti" className="underline">
+          <a
+            href="/yurist-po-nedvizhimosti"
+            className="underline"
+            data-analytics-event="navigation_click"
+            data-analytics-location="slider"
+            data-analytics-label="Slider: Юрист по недвижимости"
+            data-analytics-page-path="/yurist-po-nedvizhimosti"
+            data-analytics-slide="3"
+          >
             клик
           </a>
         </strong>
@@ -115,7 +131,15 @@ const slides = [
       <>
         Читайте подробнее о услуге тут -{" "}
         <strong>
-          <a href="/vzyskat-s-zastroishchika" className="underline">
+          <a
+            href="/vzyskat-s-zastroishchika"
+            className="underline"
+            data-analytics-event="navigation_click"
+            data-analytics-location="slider"
+            data-analytics-label="Slider: Взыскать с застройщика"
+            data-analytics-page-path="/vzyskat-s-zastroishchika"
+            data-analytics-slide="5"
+          >
             клик
           </a>
         </strong>
