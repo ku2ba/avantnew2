@@ -22,13 +22,13 @@ export default function Header() {
             href="https://yandex.ru/maps/?text=г. Екатеринбург, ул. Отто Шмидта 58, офис 315, 3 этаж"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[10px] sm:text-xs md:text-sm lg:text-base font-montserrat text-gray-700 hover:text-gray-900 transition-colors"
+            className="text-[0.625rem] sm:text-xs md:text-sm lg:text-base font-montserrat text-gray-700 hover:text-gray-900 transition-colors"
           >
             г. Екатеринбург, ул. Отто Шмидта 58, офис 315, 3 этаж
           </a>
           <a
             href="tel:+79122285809"
-            className="text-[10px] sm:text-xs md:text-sm lg:text-base font-montserrat text-gray-700 hover:text-gray-900 transition-colors mt-0.5 sm:mt-1"
+            className="text-[0.625rem] sm:text-xs md:text-sm lg:text-base font-montserrat text-gray-700 hover:text-gray-900 transition-colors mt-0.5 sm:mt-1"
             data-analytics-event="phone_click"
             data-analytics-location="header"
             data-analytics-action="phone"

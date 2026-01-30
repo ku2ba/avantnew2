@@ -66,11 +66,19 @@
 }
 
 @layer base {
+  /*
+   * Масштаб ~80%: эквивалент zoom 80% при 100% браузера.
+   * Все rem-based размеры (Tailwind spacing, fontSize, max-w-*) масштабируются.
+   */
+  html {
+    font-size: 80%;
+  }
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
     font-family: "Unbounded", Arial, sans-serif;
+    line-height: 1.5;
   }
 }

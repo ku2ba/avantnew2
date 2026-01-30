@@ -59,6 +59,17 @@ const config: Config = {
       fontFamily: {
         unbounded: ['"Unbounded"', "Arial", "sans-serif"],
       },
+      /* Контейнеры в rem — масштабируются с базовым font-size 80% */
+      container: {
+        center: true,
+        screens: {
+          sm: "40rem",
+          md: "48rem",
+          lg: "64rem",
+          xl: "80rem",
+          "2xl": "96rem",
+        },
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

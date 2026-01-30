@@ -50,7 +50,7 @@ ListItem.displayName = "ListItem"
 
 export default function MainNavigation() {
   return (
-    <nav className="sticky top-[73px] sm:top-[81px] flex items-center justify-center w-full px-3 sm:px-6 py-3 sm:py-4 border-b bg-white relative z-40">
+    <nav className="sticky top-[4.5625rem] sm:top-[5.0625rem] flex items-center justify-center w-full px-3 sm:px-6 py-3 sm:py-4 border-b bg-white relative z-40">
       {/* Логотип показываем только на десктопе, чтобы не мешал меню на мобилке */}
       <div className="absolute left-3 sm:left-6 hidden md:block">
         <Link href="/" className="cursor-pointer">
@@ -64,7 +64,7 @@ export default function MainNavigation() {
         </Link>
       </div>
 
-      <NavigationMenu className="mx-auto max-w-full md:pl-[170px]">
+      <NavigationMenu className="mx-auto max-w-full md:pl-[10.625rem]">
         {/*
           На мобильных: элементы меню в сетке 2 колонки, равномерно распределены.
           На десктопе: остаются в одну строку, выровненные по центру.
@@ -113,7 +113,7 @@ export default function MainNavigation() {
               Юр. Услуги
             </NavigationMenuTrigger>
             <NavigationMenuContent className="bg-white border shadow-lg">
-              <ul className="grid w-[280px] gap-3 p-4 sm:w-[400px] md:w-[500px] md:grid-cols-1 lg:w-[600px]">
+              <ul className="grid w-[17.5rem] gap-3 p-4 sm:w-[25rem] md:w-[31.25rem] md:grid-cols-1 lg:w-[37.5rem]">
                 <ListItem
                   href="/yurist-po-nedvizhimosti"
                   title="Споры с застройщиком"

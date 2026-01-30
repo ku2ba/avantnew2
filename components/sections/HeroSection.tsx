@@ -183,7 +183,7 @@ export default function HeroSection() {
   const currentSlideData = slides[currentSlide]
 
   return (
-    <section className="relative h-[760px] overflow-hidden">
+    <section className="relative h-[47.5rem] overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image

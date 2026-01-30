@@ -35,7 +35,7 @@ export default function TeamSection() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         <Card>
           <CardHeader className="p-0">
-            <div className="relative w-full h-[450px] overflow-hidden rounded-t-lg">
+            <div className="relative w-full h-[28.125rem] overflow-hidden rounded-t-lg">
               <Image
                 src="/shamil.PNG"
                 alt="Шамиль"
@@ -52,7 +52,7 @@ export default function TeamSection() {
 
         <Card>
           <CardHeader className="p-0">
-            <div className="relative w-full h-[450px] overflow-hidden rounded-t-lg">
+            <div className="relative w-full h-[28.125rem] overflow-hidden rounded-t-lg">
               <Image
                 src="/ivan.PNG"
                 alt="Иван"
@@ -69,7 +69,7 @@ export default function TeamSection() {
 
         <Card>
           <CardHeader className="p-0">
-            <div className="relative w-full h-[450px] overflow-hidden rounded-t-lg">
+            <div className="relative w-full h-[28.125rem] overflow-hidden rounded-t-lg">
               <Image
                 src="/kirill.PNG"
                 alt="Кирилл"

@@ -16,7 +16,7 @@ export default function PageHero({ title, description }: PageHeroProps) {
             width={360}
             height={80}
             priority
-            className="h-auto w-56 sm:w-72 lg:w-[360px] object-contain drop-shadow-lg"
+            className="h-auto w-56 sm:w-72 lg:w-[22.5rem] object-contain drop-shadow-lg"
           />
         </div>
 
@@ -27,7 +27,7 @@ export default function PageHero({ title, description }: PageHeroProps) {
 
         {/* Краткое SEO-описание под H1 */}
         {description && (
-          <p className="mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl text-center text-gray-700 max-w-3xl">
+          <p className="mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl text-center text-gray-900 max-w-3xl">
             {description}
           </p>
         )}

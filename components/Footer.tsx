@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function Footer() {
   return (
-    <footer className="bg-[#171717] pt-[75px] pb-[90px]">
+    <footer className="bg-[#171717] pt-[4.6875rem] pb-[5.625rem]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-4">
           {/* Логотип и копирайт */}
@@ -18,7 +18,7 @@ export default function Footer() {
               <img
                 src="/avant_logo_futer.svg"
                 alt="Авант"
-                className="max-w-[200px] h-auto"
+                className="max-w-[12.5rem] h-auto"
               />
             </Link>
             <p className="text-white text-xs">© Все права защищены. ИП Сакаев</p>
